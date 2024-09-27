@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your Event Recommendations</h1>
+      <ul>
+        {% for event in events.itertuples() %}
+        <li class="event-item">
+          <h2>{{ event.event_name }}</h2>
+          <p><strong>Date & Time:</strong> {{ event.datetime }}</p>
+          <p><strong>Location:</strong> {{ event.location }}</p>
+          <p><strong>Host by:</strong> {{ event.host_org }}</p>
+          <p><strong>Category:</strong> {{ event.categories }}</p>
+          <p><strong>Description:</strong>{{ event.description }}</p>
+          <p><strong>Perks:</strong>{{ event.event_perks}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>

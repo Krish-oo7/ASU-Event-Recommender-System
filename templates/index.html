@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Recommender</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Event Recommender System</h1>
+      <form action="/recommend" method="post" id="preferencesForm">
+        <label for="preferences">Enter your preferences:</label>
+        <textarea
+          id="preferences"
+          name="preferences"
+          rows="4"
+          cols="50"
+          placeholder="e.g., I like music festivals, outdoor activities, and volunteer work."
+        ></textarea>
+        <input type="submit" value="Get Events" />
+      </form>
+
+      <h2>Popular Keywords</h2>
+      <div class="keywords">
+        <span class="keyword">Music</span>
+        <span class="keyword">Festival</span>
+        <span class="keyword">Outdoor</span>
+        <span class="keyword">Volunteer</span>
+        <span class="keyword">Technology</span>
+        <span class="keyword">Art</span>
+        <span class="keyword">Food</span>
+        <span class="keyword">Wellness</span>
+        <span class="keyword">Adventure</span>
+        <span class="keyword">Community</span>
+        <span class="keyword">Fraternity</span>
+        <span class="keyword">Sorority</span>
+        <span class="keyword">Anime</span>
+        <span class="keyword">Movie</span>
+        <span class="keyword">Coding</span>
+        <span class="keyword">Campus: Tempe, Polytechnic..</span>
+      </div>
+
+      <h2>How It Works</h2>
+      <p>
+        This recommender system uses a technique called
+        <strong>Content-based filtering</strong>. We analyze the description and
+        other features of each event using a method called
+        <strong>TF-IDF vectorization</strong>, which helps us understand the
+        importance of different words in the context of the event descriptions.
+        When you enter your preferences, the system compares your input with the
+        event descriptions to find events that best match your interests. The
+        closer the match, the higher the event ranks in your recommendations.
+      </p>
+    </div>
+
+    <script>
+      // Submit form when pressing Enter key
+      document
+        .getElementById("preferences")
+        .addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault(); // Prevent the default newline behavior
+            document.getElementById("preferencesForm").submit();
+          }
+        });
+    </script>
+  </body>
+</html>
