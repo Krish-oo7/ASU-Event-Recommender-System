@@ -109,9 +109,3 @@ def recommend():
     user_preferences = request.form['preferences']
     recommendations = recommned_event(user_preferences)
     return render_template('recommendations.html', events=recommendations)
-
-
-if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run(port = 8501)
-    
