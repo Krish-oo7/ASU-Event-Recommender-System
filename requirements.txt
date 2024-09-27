@@ -1,7 +1,5 @@
 nltk
 contractions
-string
-re
 flask
 pandas
 numpy
