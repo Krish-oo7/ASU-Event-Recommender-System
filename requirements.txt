@@ -1,7 +1,6 @@
 streamlit
 nltk
 contractions
-flask
 pandas
 numpy
 scikit-learn
