@@ -1,6 +1,8 @@
-streamlit
 nltk
 contractions
+string
+re
+flask
 pandas
 numpy
-scikit-learn
+sklearn
