@@ -77,7 +77,7 @@ st.markdown(
     /* Body Styling */
     body {
         font-family: 'Roboto', sans-serif;
-        background-image: url('/static/bg.jpg');
+        background-image: url('bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
