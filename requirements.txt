@@ -1,7 +1,6 @@
 streamlit
 nltk
 contractions
-string
 re
 pandas
 numpy
