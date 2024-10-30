@@ -1,7 +1,6 @@
 streamlit
 nltk
 contractions
-re
 pandas
 numpy
 sklearn
