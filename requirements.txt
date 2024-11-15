@@ -1,8 +1,8 @@
+streamlits
 nltk
 contractions
 string
 re
-flask
 pandas
 numpy
 sklearn
