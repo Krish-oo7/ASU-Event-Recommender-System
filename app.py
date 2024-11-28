@@ -3,6 +3,8 @@ import nltk
 import contractions
 import string
 import re
+import streamlit as st
+import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -226,7 +228,7 @@ user_input = st.text_input('Enter your preferences:' , placeholder='e.g., I like
 submit_button = st.button("Get Recommendations")
 
 if submit_button and user_input:
-    recommendations = recommend_event(user_input)
+    recommendations = recommned_event(user_input)
     st.markdown("""
     <h3 style='font-size: 20px; color:#292828;'>Here are your event recommendations:</h3>
 """, unsafe_allow_html=True)
