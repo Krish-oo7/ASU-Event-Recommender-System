@@ -1,4 +1,4 @@
-streamlits
+streamlit
 nltk
 contractions
 string
