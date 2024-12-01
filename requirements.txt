@@ -3,4 +3,4 @@ nltk
 contractions
 pandas
 numpy
-sklearn
+scikit-learn
