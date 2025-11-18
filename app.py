@@ -165,35 +165,38 @@ st.markdown("""
         }
     
         /* Button Styling */
-    .stButton button {
-        background-color: #8c1d40;
-        color: #ffffff;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: bold;
-    
-        /* Fix wrapping */
-        white-space: nowrap !important;
-        min-width: 250px !important;
-    
-        /* Layout */
-        display: block;
-        width: fit-content !important;
-        margin: 20px auto;
-    
-        /* Effects */
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        box-shadow: 0 4px 15px rgba(140, 29, 64, 0.3);
-    }
-    
-    .stButton button:hover {
-        background-color: #a84363;
-        color: #ffffff;
-        transform: translateY(-3px);
-    }
+          .stButton {
+              display: flex;
+              justify-content: center;  /* Center the button */
+          }
+          
+          .stButton button {
+              background-color: #8c1d40;
+              color: #ffffff;
+              padding: 12px 24px;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: bold;
+          
+              /* Prevent wrapping */
+              white-space: nowrap !important;
+          
+              /* Let button size naturally */
+              width: fit-content !important;
+          
+              /* Center on page */
+              margin: 20px auto;
+          
+              transition: background-color 0.3s ease, transform 0.3s ease;
+              box-shadow: 0 4px 15px rgba(140, 29, 64, 0.3);
+          }
+          
+          .stButton button:hover {
+              background-color: #a84363;
+              transform: translateY(-3px);
+          }
 
 
         /* Recommendations List */
@@ -249,3 +252,4 @@ if submit_button and user_input:
         </div>
 
         """, unsafe_allow_html=True)
+
