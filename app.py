@@ -146,11 +146,11 @@ st.markdown("""
 
         /* Input field styling */
         .stTextInput input {
-            background-color: #ffffff !important;  /* Changed to white */
+            background-color: #ffffff;
             color: #000000 !important;
-            border: 1px solid #8c1d40 !important;
-            border-radius: 8px !important;
-            padding: 10px !important;
+            border: 1px solid #8c1d40;
+            border-radius: 8px;
+            padding: 10px;
         }
         
         .stTextInput input::placeholder {
@@ -167,7 +167,7 @@ st.markdown("""
         /* Button Styling */
           .stButton {
               display: flex;
-              justify-content: center;  /* Center the button */
+              justify-content: center;
           }
           
           .stButton button {
@@ -181,10 +181,10 @@ st.markdown("""
               font-weight: bold;
           
               /* Prevent wrapping */
-              white-space: nowrap !important;
+              white-space: nowrap;
           
               /* Let button size naturally */
-              width: fit-content !important;
+              width: fit-content;
           
               /* Center on page */
               margin: 20px auto;
@@ -252,4 +252,5 @@ if submit_button and user_input:
         </div>
 
         """, unsafe_allow_html=True)
+
 
