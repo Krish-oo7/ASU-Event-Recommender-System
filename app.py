@@ -165,29 +165,36 @@ st.markdown("""
         }
     
         /* Button Styling */
-        .stButton button {
-            background-color: #8c1d40;
-            color: #ffffff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            display: block;
-            width: 50%;
-            max-width: 300px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(140, 29, 64, 0.3);
-            margin: 20px auto;
-        }
+    .stButton button {
+        background-color: #8c1d40;
+        color: #ffffff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    
+        /* Fix wrapping */
+        white-space: nowrap !important;
+        min-width: 250px !important;
+    
+        /* Layout */
+        display: block;
+        width: fit-content !important;
+        margin: 20px auto;
+    
+        /* Effects */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(140, 29, 64, 0.3);
+    }
+    
+    .stButton button:hover {
+        background-color: #a84363;
+        color: #ffffff;
+        transform: translateY(-3px);
+    }
 
-        /* Button Hover Effects */
-        .stButton button:hover {
-            background-color: #a84363;
-            color: #ffffff;
-            transform: translateY(-3px);
-        }
 
         /* Recommendations List */
         .event-item {
@@ -240,4 +247,5 @@ if submit_button and user_input:
             <p><strong>Location:</strong> {row['location']}</p>
             <p><strong>Description:</strong> {row['description']}</p>
         </div>
+
         """, unsafe_allow_html=True)
